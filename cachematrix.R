@@ -11,11 +11,11 @@ makeCacheMatrix <- function(x = matrix()) {
         setinv <- function(solve) inv <- solve
         getinv <- function() inv
         list(set = set, get = get, setinv = setinv, getinv = getinv)
-        
 }
 
 
-## Write a short comment describing this function
+## If there is no value of the inverse already cached, 
+## then the function computes and returns that inverse.
 
 cacheSolve <- function(x, ...) {
         i <- x$getinv()
